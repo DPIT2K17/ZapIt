@@ -3,10 +3,19 @@
 }
 
 
+
 body {
-  font-family: 'Roboto Slab', serif;
+  background:url("background.svg"),radial-gradient(200px 500px at center, #afaba7 0%, rgba(0, 0, 0, 0) 50%);
+  background-attachment: fixed;
+  animation: animation 10s linear infinite;
   margin: 0;
 }
+@keyframes animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 
 h1,h2,h3,h4 {
   margin: 0;
@@ -63,9 +72,6 @@ footer a {
   text-decoration: none;
   transition: all 1s ease;
 }
-text-transform: uppercase;
-  margin: 0;
-  padding: 2rem;
 footer a:hover{
   color: #1abc9c;
   transition: all 1s ease;

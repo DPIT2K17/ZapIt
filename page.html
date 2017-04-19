@@ -4,19 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zap It ! Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Zap It again !</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <header id="headerPage">
-      <h1>Zap Everything !</h1>
+      <h1>Zap It !</h1>
     </header>
-    <section id="content">
-      <div id="big-video">
+    <nav>
+      <ul id="nav">
+        <li><a href="index.html">Vidéos</a></li>
+        <li class="active"><a href="page.html">Spion</a></li>
+      </ul>
+    </nav>
+    <section id="content" class="row">
+      <article class="col l6 m6 s12" id="big-video">
           <iframe src="//www.youtube.com/embed/videoseries?list=PLedCKm0JjYVzhlIX2BnfpOVl2Y2gg6TR1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <p>Suivez l'actualité du ZAP sur Zap It !</p>
+      </article>
+      <article class="col l6 m6 s12" id="comment">
+        <h3>Les Zaps de Spion</h3>
+        <hr>
+        <p>Le Zap du site Spi0n avec pleins de vidéos ! Voici le nouveau zapping du web où vous trouverez une compilation de vidéos étonnantes et insolites qui ont circulé cette semaine sur internet. Bon zap!</p>
+      </article>
     </section>
     <footer id="footerPage">
       <div class="logo-footer">
