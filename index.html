@@ -7,46 +7,82 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zap It !</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
-
-    <header>
-      <h1>Zap It !</h1>
-
-      <nav id="menu">
-        <ul>
-          <li><a href="index.html">League of Legends</a></li>
-          <li><a href="page.html">Zap de Spion</a></li>
-        </ul>
-      </nav>
+    <header id="entete">
+      <section class="container">
+        <h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>La référence web des dernières Podcast</small></h1>
+      </section>
     </header>
+    <nav id="menu" class="navbar-fixed">
+      <div class="nav-wrapper container">
+        <ul class="right hide-on-med-and-down">
+          <li class="active"><a href="index.html">Podcast</a></li>
+          <li><a href="">Jeux Vidéo</a></li>
+          <li><a href="">Tutos</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <section id="content" class="container">
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLbAFXJC0J5GZvC5TjJv5RxPUKlCvh-Ihr" frameborder="0" allowfullscreen></iframe>
-      <article class="description">
-        <h2>Présentation</h2>
-        <p>
-          League of Legends (abrégé LoL, anciennement nommé League of Legends: Clash of Fates) est un jeu vidéo massivement multijoueur (MMO) sur ordinateur exclusivement, de type arène de bataille en ligne (MOBA) gratuit développé et édité par Riot Games sur Windows, Linux et Mac OS X . Fin janvier 2013, un nouveau client bêta pour Mac a été distribué par Riot Games. Le jeu a été évoqué pour la première fois le 8 octobre 2008 et est entré en phase bêta le 10 avril 2009.
-        </p>
-        <p>
-          Deux concepteurs du mod très populaire de Warcraft III, Defense of the Ancients: Allstars (plus connu sous son abréviation DotA), Steve « Guinsoo » Feak et Steve « Pendragon » Mescon, ont rejoint Riot Games pour la réalisation de League of Legends, d'où une forte similitude avec DotA. Pendragon, le directeur des relations communautés chez Riot Games, a participé à la création du site Internet de DotA: Allstars ainsi qu'à ses forums.
-        </p>
-        <p>
-          League of Legends devient rapidement un véritable phénomène. C'est en 2013 qu'il devient l'un des jeux les plus joués au monde. Il séduit aussi le monde du sport électronique en devenant l'événement eSport le plus regardé de l'histoire, avec plus de 32 millions de spectateurs en ligne et plus de 8,5 millions de vues simultanées lors de la finale de la saison 3 du championnat du monde en 2013. Le record est de nouveau battu en 2015, lors de la saison 5, avec un total de 36 millions de spectateurs et un pic d'audience de 14 millions de spectateur puis en 2016, lors de la saison 6, avec un total de 43 millions de spectateurs et un pic d'audience de 14,7 millions de spectateur.
-        </p>
+    <section id="content" class="carousel carousel-slider center" data-indicators="true">
+      <article class="content-article carousel-item row">
+        <section class="valign-wrapper col offset-l2 l4">
+          <section class="description">
+            <h2>Les Podcast de Mister V</h2>
+            <p>
+              Yvick Letexier, plus connu sous le pseudonyme de Mister V, né le 14 août 1993 à Grenoble, est un vidéaste, humoriste et rappeur français. Il s'inscrit dans la première génération d'humoristes du web aux côtés de Norman, Cyprien et Hugo Tout Seul. Il publie ses vidéos humoristiques sur les réseaux sociaux, notamment sur YouTube où il comptabilise plus de 264 millions de vues sur sa chaîne.
+            </p>
+          </section>
+        </section>
+        <section class="video center col l4">
+          <h3>Sa dernière vidéo :</h3>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/1BE9wVnEink" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </article>
+      <article class="content-article carousel-item row">
+        <section class="valign-wrapper col offset-l2 l4">
+          <section class="description">
+            <h2>Les Podcast de Norman</h2>
+            <p>
+              Norman Thavaud, dit Norman, né le 14 avril 1987 à Arras en France, est un vidéaste humoriste et acteur français. Il se fait connaître en publiant ses vidéos sur internet et en les relayant sur les réseaux sociaux, à l'instar de Cyprien, Mister V, Hugo Tout Seul, Natoo ou Jérôme Niel, la nouvelle génération d'humoristes utilisant ces outils.
+            </p>
+          </section>
+        </section>
+        <section class="video center col l4">
+          <h3>Sa dernière vidéo :</h3>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/kjA5WC-iB18" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </article>
+      <article class="content-article carousel-item row">
+        <section class="valign-wrapper col offset-l2 l4">
+          <section class="description">
+            <h2>Les Podcast de Cyprien</h2>
+            <p>
+              Cyprien Iov, dit Cyprien, également connu sous le pseudonyme de Monsieur Dream, né le 12 mai 1989 à Nice en France, est un blogueur, vidéaste, acteur, doubleur, scénariste de films, bandes dessinées et animateur français. Il s'est fait connaître grâce à son blog sur lequel il poste des illustrations, des vidéos sur YouTube, et des tests de jeux vidéo, ceci en parallèle de ses études. En 2015, il est celui qui cumule le plus de vues sur le YouTube français hors vidéos musicales avec sa vidéo Technophobe qui dépasse les 23 millions de vues.
+            </p>
+          </section>
+        </section>
+        <section class="video center col l4">
+          <h3>Sa dernière vidéo :</h3>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/7HnVgtAL8DA" frameborder="0" allowfullscreen></iframe>
+        </section>
       </article>
     </section>
+    <footer id="footer">
 
-    <footer>
-      <div class="logo-footer">
-        <a href="">
-          <!-- <img src="logo-footer.png" alt="Zap It !"><br/> -->
-          <span>Zap It !</span>
-        </a>
-      </div>
     </footer>
+
   </body>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true
+    });
+  </script>
 </html>

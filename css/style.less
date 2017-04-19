@@ -1,0 +1,65 @@
+// out: ../css/style.min.css, sourcemap: true, compress: true
+
+
+// --------------------  MY COLOR'S THEME
+
+@rouge : #c0392b;
+@gris : #ecf0f1;
+
+
+// --------------------  CONTENT
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  padding-top: 64px;
+}
+
+#entete {
+  background-image: url(../images/bkg-header.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  h1 {
+    margin: 0;
+    padding: 4rem 0;
+    color: #FFF;
+
+    i {
+      font-size: 3rem;
+    }
+  }
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: @rouge;
+}
+
+#content {
+  min-height: 600px;
+
+  .content-article {
+
+    .video {
+      iframe {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .indicators {
+    .indicator-item {
+      background-color: #e74c3c;
+      &.active {
+        background-color: #000;
+      }
+    }
+  }
+}
