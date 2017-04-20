@@ -13,7 +13,7 @@
   <body>
     <header id="entete">
       <section class="container">
-        <h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>La référence web des dernières Podcast</small></h1>
+        <h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>La référence web des derniers Zaps</small></h1>
       </section>
     </header>
     <nav id="menu" class="navbar-fixed">
@@ -25,25 +25,53 @@
         </ul>
       </div>
     </nav>
-    <br><br><br>
-    <section id="content" class="row">
-      <article class="col l6 m6 s12" id="big-video">
+    <section id="content" class="container carousel carousel-slider center" data-indicators="true">
+      <article class="content-article carousel-item row">
+        <section class="valign-wrapper col l6">
+          <section class="description">
+            <h2>Les Zaps de Spion</h2>
+            <p>
+Le Zap du site Spi0n avec pleins de vidéos ! Voici le nouveau zapping du web où vous trouverez une compilation de vidéos étonnantes et insolites qui ont circulé cette semaine sur internet. Bon zap!            </p>
+          </section>
+        </section>
+        <section class="video center col l6">
+          <h3>La playlist :</h3>
           <iframe src="//www.youtube.com/embed/videoseries?list=PLedCKm0JjYVzhlIX2BnfpOVl2Y2gg6TR1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        </section>
       </article>
-      <article class="col l5 m5 s12" id="comment">
-        <h3>Les Zaps de Spion</h3>
-        <hr>
-        <p>Le Zap du site Spi0n avec pleins de vidéos ! Voici le nouveau zapping du web où vous trouverez une compilation de vidéos étonnantes et insolites qui ont circulé cette semaine sur internet. Bon zap!</p>
+      <article class="content-article carousel-item row">
+        <section class="valign-wrapper col l6">
+          <section class="description">
+            <h2>Les Zaps de ZapNet</h2>
+            <p>
+Compilation de Vidéos Fun & Insolite que l'on peux trouver sur le web en ce moment. Une vidéo chaque MERCREDI & SAMEDI !            </p>
+          </section>
+        </section>
+        <section class="video center col l6">
+          <h3>La playlist :</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLjEF2oQJl-dgZUOoocLuvFq_wPzRoe5xy" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </article>
+      <article class="content-article carousel-item row">
+        <section class="valign-wrapper col l6">
+          <section class="description">
+            <h2>Zap Télé</h2>
+            <p>
+              Zap Télé, pour ne RIEN rater de la télé ! (zapping traditionnel made in France depuis 2010)
+            </p>
+          </section>
+        </section>
+        <section class="video center col l6">
+          <h3>La playlist :</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PL_La5M9bLwwp7Z-wtdx3DexmPADbqzSk4" width="640" height="360" frameborder="0" allowfullscreen></iframe>
       </article>
     </section>
-    <footer id="footerPage">
-      <div class="logo-footer">
-        <a href="">
-          <!-- <img src="logo-footer.png" alt="Zap It !"><br/> -->
-          <span>Zap It !</span>
-        </a>
-      </div>
-    </footer>
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true
+    });
+  </script>
 </html>
