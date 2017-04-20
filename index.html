@@ -22,7 +22,6 @@
           <li class="active"><a href="index.html">Podcast</a></li>
           <li><a href="page.html">Spi0n</a></li>
           <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
-
         </ul>
         <ul class="right">
           <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
@@ -30,12 +29,10 @@
       </div>
     </nav>
 
-
     <ul id="slide-out" class="side-nav">
       <li class="active"><a href="index.html">Podcast</a></li>
       <li><a href="page.html">Spi0n</a></li>
     </ul>
-
 
     <section id="content" class="container carousel carousel-slider center" data-indicators="true">
       <article class="content-article carousel-item row">
@@ -85,11 +82,33 @@
 
     </section>  <!-- END OF CONTENT -->
     <footer id="footerPage">
-      <div class="logo-footer">
-        <a href="">
-          <span>Zap It !</span>
-        </a>
-      </div>
+      <section class="row">
+        <section class="logo-footer col l4 offset-l2 s12">
+          <a href="">
+            <span>Zap It !</span>
+          </a>
+        </section>
+        <section class="col l4 s12" id="rating">
+          <hr>
+          <form>
+            <div class="stars">
+              <input type="radio" name="star" class="star-1" id="star-1" />
+              <label class="star-1" for="star-1">1</label>
+              <input type="radio" name="star" class="star-2" id="star-2" />
+              <label class="star-2" for="star-2">2</label>
+              <input type="radio" name="star" class="star-3" id="star-3" />
+              <label class="star-3" for="star-3">3</label>
+              <input type="radio" name="star" class="star-4" id="star-4" />
+              <label class="star-4" for="star-4">4</label>
+              <input type="radio" name="star" class="star-5" id="star-5" />
+              <label class="star-5" for="star-5">5</label>
+              <span></span>
+            </div>
+          </form>
+          <span id="nombre"></span>
+          <hr>
+        </section>
+      </section>
     </footer>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
