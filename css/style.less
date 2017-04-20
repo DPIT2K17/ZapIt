@@ -25,7 +25,7 @@ body {
   background-repeat: no-repeat;
   h1 {
     margin: 0;
-    padding: 4rem 0;
+    padding: 5rem 0;
     color: #FFF;
 
     i {
@@ -43,6 +43,7 @@ body {
 }
 
 #content {
+  padding: 2rem 0;
   min-height: 600px;
 
   .content-article {
@@ -56,6 +57,9 @@ body {
 
   .indicators {
     .indicator-item {
+      height: 20px;
+      width: 20px;
+      margin: 24px 10px;
       background-color: #e74c3c;
       &.active {
         background-color: #000;
@@ -63,28 +67,21 @@ body {
     }
   }
 }
-#content {
-  padding: 2rem 0;
+
+
+footer {
+  height: 200px;
+  line-height: 200px;
   text-align: center;
-}
-#big-video iframe{
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-}
-#comment{
-  text-align: left;
-  background-color: rgba(255, 0, 0,0.6);
-  color: white;
-  h3{
-    font-weight: bold;
-    color: white;
-    padding : 10px;
-  }
-  hr{
-    border: 1px solid black;
-  }
-  p{
-    max-width: 60%;
+  background-color: @rouge;
+
+  .logo-footer {
+    a {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      color: #FFF;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
   }
 }
