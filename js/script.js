@@ -1,6 +1,8 @@
-$(document).ready(function{
-  // Initialize collapse button
-$(".button-collapse").sideNav();
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-//$('.collapsible').collapsible();
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true
+  });
+
 });

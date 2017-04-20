@@ -18,18 +18,28 @@
     </header>
     <nav id="menu" class="navbar-fixed">
       <div class="nav-wrapper container">
-        <ul class="right">
+        <ul class="right hide-on-med-and-down">
           <li class="active"><a href="index.html">Podcast</a></li>
           <li><a href="page.html">Spi0n</a></li>
-          <li><a href="">Tutos</a></li>
+          <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
+
+        </ul>
+        <ul class="right">
+          <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
         </ul>
       </div>
     </nav>
-    
+
+
+    <ul id="slide-out" class="side-nav">
+      <li class="active"><a href="index.html">Podcast</a></li>
+      <li><a href="page.html">Spi0n</a></li>
+    </ul>
+
 
     <section id="content" class="container carousel carousel-slider center" data-indicators="true">
       <article class="content-article carousel-item row">
-        <section class="valign-wrapper col l6">
+        <section class="col l6 m6 s12">
           <section class="description">
             <h2>Les Podcast de Mister V</h2>
             <p>
@@ -37,14 +47,14 @@
             </p>
           </section>
         </section>
-        <section class="video center col l6">
+        <section class="video center col l6 m6 s12">
           <h3>Sa dernière vidéo :</h3>
           <iframe width="640" height="360" src="https://www.youtube.com/embed/1BE9wVnEink" frameborder="0" allowfullscreen></iframe>
         </section>
       </article>
 
       <article class="content-article carousel-item row">
-        <section class="valign-wrapper col l6">
+        <section class="col l6 m6 s12">
           <section class="description">
             <h2>Les Podcast de Norman</h2>
             <p>
@@ -52,14 +62,14 @@
             </p>
           </section>
         </section>
-        <section class="video center col l6">
+        <section class="video center col l6 m6 s12">
           <h3>Sa dernière vidéo :</h3>
           <iframe width="640" height="360" src="https://www.youtube.com/embed/kjA5WC-iB18" frameborder="0" allowfullscreen></iframe>
         </section>
       </article>
 
       <article class="content-article carousel-item row">
-        <section class="valign-wrapper col l6">
+        <section class="col l6 m6 s12">
           <section class="description">
             <h2>Les Podcast de Cyprien</h2>
             <p>
@@ -67,13 +77,13 @@
             </p>
           </section>
         </section>
-        <section class="video center col l6">
+        <section class="video center col l6 m6 s12">
           <h3>Sa dernière vidéo :</h3>
           <iframe width="640" height="360" src="https://www.youtube.com/embed/7HnVgtAL8DA" frameborder="0" allowfullscreen></iframe>
         </section>
       </article>
 
-    </section>
+    </section>  <!-- END OF CONTENT -->
     <footer id="footerPage">
       <div class="logo-footer">
         <a href="">
@@ -84,6 +94,7 @@
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript">
     $('.carousel.carousel-slider').carousel({
       fullWidth: true
