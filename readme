@@ -1,13 +1,12 @@
 Projet : HTML5/CSS3/JS
 
-Contexte : Un site d'au moins deux pages, élégant, qui utilise les éléments du HTML5 vu en formation. Usage de CSS basique, pas de préprocesseur ou d'éléments complexes
+Contexte : Un site d'au moins deux pages, élégant, qui utilise les éléments du HTML5 vu en formation.
+Usage de CSS3 (LESS) et du JS (jQuery).
 
-Thème :	Streaming audio – vidéo, ou application qui tape dans une API
+Utilisation de fichiers JSON et de localStorage pour l'UX.
 
-Installation :
+Thème :	Streaming vidéo youtubeur/ZAP 
 
 Licence : MIT Licence
 
-Créateur : Patrice Picollet
-
-Collaborateur : Dinh Nguyen
+Créateurs : Patrice Picollet, Dinh Nguyen
