@@ -63,7 +63,6 @@ $(document).ready(function(){
     i = index + 1;
    });
    moyenne = moyenne / i;
-      console.log(moyenne);
    localStorage.removeItem('rating');
    localStorage.setItem('rating',JSON.stringify(vote));
    rating(moyenne,i);
@@ -78,7 +77,7 @@ $(document).ready(function(){
      $.each(vote, function(index, value){
       moyenne += value.note;
       i = index + 1;
-     });
+    });
      moyenne = moyenne / i;
         console.log(moyenne);
      localStorage.removeItem('rating');
@@ -148,4 +147,66 @@ $(document).ready(function(){
    $('#nombre').html(nombre+" avis");
 
  }
+ if (localStorage.getItem('suggestions') !== null) {
+   var suggestions = JSON.parse(localStorage.getItem("suggestions"));
+   $.each(suggestions, function(index, value){
+     $('#suggestions').append("<tr><td>"+value.prenom+" "+value.nom+
+     "</td><td>"+value.suggestion+"</td><td>"+value.date+"</td></tr>");
+   });
+ }else {
+   $.getJSON("suggestion.json", function(){
+    console.log('done');
+   }).done(function(data){
+     console.log(data);
+    localStorage.setItem('suggestions', JSON.stringify(data.suggestions));
+    $.each(data.suggestions, function(index, value){
+      $('#suggestions').append("<tr><td>"+value.prenom+" "+value.nom+
+      "</td><td>"+value.suggestion+"</td><td>"+value.date+"</td></tr>");
+    });
+
+   }).fail(function(error){
+    console.log(error);
+   });
+ }
+$('#submit').click(function(event){
+  event.preventDefault();
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth()+1;
+  var day = date.getDate();
+  switch (month) {
+    case 1: month = "Janvier";
+      break;
+    case 2: month = "Fevrier";
+      break;
+    case 3: month = "Mars";
+      break;
+    case 4: month = "Avril";
+      break;
+    case 5: month = "Mai";
+      break;
+    case 6: month = "Juin";
+      break;
+    case 7: month = "Juillet";
+      break;
+    case 8: month = "Aout";
+      break;
+    case 9: month = "Septembre";
+      break;
+    case 10: month = "Octobre";
+      break;
+    case 11: month = "Novembre";
+      break;
+    case 12: month = "Decembre";
+      break;
+  }
+  var currentDate =day+" "+month+" "+year;
+  var suggestions = JSON.parse(localStorage.getItem('suggestions'));
+  suggestions.push({"nom":$('#last_name').val(),"prenom":$('#first_name').val(),"suggestion":$('#suggestion').val(),"date":currentDate});
+  localStorage.removeItem('suggestions');
+  localStorage.setItem('suggestions',JSON.stringify(suggestions));
+  $('#suggestions').append("<tr><td>"+$('#first_name').val()+" "+$('#last_name').val()+
+  "</td><td>"+$('#suggestion').val()+"</td><td>"+currentDate+"</td></tr>");
+});
+
 });
