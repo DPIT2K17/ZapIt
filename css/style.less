@@ -10,6 +10,12 @@ h1,h2,h3,h4,h5,h6 {
 body {
   padding-top: 64px;
 }
+.btn-red {
+  background-color: @rouge;
+  &:hover {
+    background-color: #e74c3c;
+  }
+}
 #entete {
   background-image: url(../images/bkg-header.jpg);
   background-size: cover;
@@ -30,6 +36,11 @@ body {
   left: 0;
   width: 100%;
   background-color: @rouge;
+
+  .brand-logo {
+    font-family: 'Oswald', sans-serif;
+  }
+
   ul {
     li {
       transform: skewX(-10deg);
@@ -104,6 +115,18 @@ body {
     }
   }
 }
+
+#form_id {
+  input,textarea {
+    &:focus {
+      border-bottom: 1px solid @rouge;
+      box-shadow: 0 1px 0 0 @rouge;
+    }
+  }
+  input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: @rouge;
+  }
+}
 #contact {
   padding: 2rem 0;
   form {
@@ -115,12 +138,6 @@ body {
     }
     input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
       color: @rouge;
-    }
-    .btn-red {
-      background-color: @rouge;
-      &:hover {
-        background-color: #e74c3c;
-      }
     }
   }
 }
