@@ -10,3 +10,14 @@ Thème :	Streaming vidéo youtubeur/ZAP
 Licence : MIT Licence
 
 Créateurs : Patrice Picollet, Dinh Nguyen
+  - Fonctionalités:
+      s'enregister au debut de la navigation du site.
+      donner son avis sur le site (etoiles).
+      mettre une suggestion sur le site
+      pouvoir regarder des videos youtube  
+  - Bugs connus
+      Slider materialize qui fait la tete
+  - Retour UX de l'autre groupe
+      Le design est bien, responsive.
+      des fonctionnalités buguées (qui ont été fixées pour la version finale)
+      améliorer le cadre des vidéos
