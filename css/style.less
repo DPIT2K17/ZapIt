@@ -57,6 +57,14 @@ body {
   }
 }
 
+.side-nav {
+  li {
+    &.active {
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+}
+
 #slide-out {
   background-color: @rouge;
 
@@ -111,7 +119,6 @@ body {
 
 #contact {
   padding: 2rem 0;
-  background-color: #ecf0f1;
 
   form {
     input,textarea {
@@ -123,6 +130,14 @@ body {
 
     input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
       color: @rouge;
+    }
+
+    .btn-red {
+      background-color: @rouge;
+
+      &:hover {
+        background-color: #e74c3c;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@
   <body>
     <header id="entete">
       <section class="container">
-        <h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>Les vidéos du moments</small></h1>
+        <h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>Vos suggestions</small></h1>
       </section>
     </header>
     <nav id="menu" class="navbar-fixed">
@@ -34,31 +34,46 @@
       <li><a href="page.html">Spi0n</a></li>
       <li class="active"><a href="suggestion.html">Suggestions</a></li>
     </ul>
-    <form action="index.html" class="col l6 m6 s12">
-      <h4>Merci de remplir le formulaire de contact :</h4>
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Entrez votre prénom" id="first_name" type="text" class="validate">
-          <label for="first_name">Prénom</label>
-        </div>
-        <div class="input-field col s6">
-          <input placeholder="Entrez votre nom" id="last_name" type="text" class="validate">
-          <label for="last_name">Nom</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="Entrez votre email" id="mail" type="email" class="validate">
-          <label for="mail">E-mail</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Votre message</label>
-        </div>
-      </div>
-    </form>
+    <section id="contact">
+      <section class="row container">
+        <form action="index.html" class="col l6 m6 s12">
+          <h2>Envoyer vos suggestions<br/>
+          <small></small></h2>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Entrez votre prénom" id="first_name" type="text" class="validate">
+              <label for="first_name">Prénom</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Entrez votre nom" id="last_name" type="text" class="validate">
+              <label for="last_name">Nom</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Entrez votre email" id="mail" type="email" class="validate">
+              <label for="mail">E-mail</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Entrez votre suggestion" id="suggestion" type="text" class="validate">
+              <label for="suggestion">Suggestion</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <input type="button" value="Envoyer" class="btn btn-default btn-red">
+            </div>
+          </div>
+        </form>
+        <section class="col l6 m6 s12">
+          <!-- LISTE DES SUGGESTIONS -->
+        </section>
+      </section>
+
+    </section>
+
     <footer id="footerPage">
       <section class="row">
         <section class="logo-footer col l4 offset-l2 s12">
