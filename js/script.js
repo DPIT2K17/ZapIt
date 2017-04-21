@@ -34,8 +34,5 @@ $(document).ready(function(){
  }).fail(function(error){
    console.log(error);
  });
- $('form').click(function(){
-   alert('votre avis ne sera jamais pris en compte ! Muahahahahahahaha');
- });
 
 });
