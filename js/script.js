@@ -150,7 +150,7 @@ $(document).ready(function(){
  if (localStorage.getItem('suggestions') !== null) {
    var suggestions = JSON.parse(localStorage.getItem("suggestions"));
    $.each(suggestions, function(index, value){
-     $('#suggestions').append("<tr><td>"+value.prenom+" "+value.nom+
+     $('#tbody').append("<tr><td>"+value.prenom+" "+value.nom+
      "</td><td>"+value.suggestion+"</td><td>"+value.date+"</td></tr>");
    });
  }else {
@@ -160,7 +160,7 @@ $(document).ready(function(){
      console.log(data);
     localStorage.setItem('suggestions', JSON.stringify(data.suggestions));
     $.each(data.suggestions, function(index, value){
-      $('#suggestions').append("<tr><td>"+value.prenom+" "+value.nom+
+      $('#tbody').append("<tr><td>"+value.prenom+" "+value.nom+
       "</td><td>"+value.suggestion+"</td><td>"+value.date+"</td></tr>");
     });
 
@@ -205,8 +205,24 @@ $('#submit').click(function(event){
   suggestions.push({"nom":$('#last_name').val(),"prenom":$('#first_name').val(),"suggestion":$('#suggestion').val(),"date":currentDate});
   localStorage.removeItem('suggestions');
   localStorage.setItem('suggestions',JSON.stringify(suggestions));
-  $('#suggestions').append("<tr><td>"+$('#first_name').val()+" "+$('#last_name').val()+
+  $('#tbody').append("<tr><td>"+$('#first_name').val()+" "+$('#last_name').val()+
   "</td><td>"+$('#suggestion').val()+"</td><td>"+currentDate+"</td></tr>");
 });
-
+if (localStorage.getItem("user") === null) {
+  $('#popup').fadeIn();
+  $('.mask').fadeIn();
+  $('#submit_user').click(function(event){
+    event.preventDefault();
+    var user = $('#first_name_user').val()+" "+$('#last_name_user').val();
+    localStorage.setItem('user',user);
+    $('#popup').fadeOut();
+    $('.mask').fadeOut();
+    $('#user').append("Bienvenue "+localStorage.getItem("user"));
+  });
+}else {
+  $('#user').append("Bienvenue "+localStorage.getItem("user"));
+  var name = localStorage.getItem("user").split(" ");
+  $("#first_name").prop('value',name[0]);
+  $("#last_name").prop('value',name[1]);
+}
 });

@@ -12,13 +12,35 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
+    <section class="mask"></section>
+    <section id="popup">
+      <form action="#" class="col l6 m6 s12" id="form_id">
+        <h2>Qui êtes vous ?<br/></h2>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Entrez votre prénom" id="first_name_user" type="text" class="validate">
+            <label for="first_name">Prénom</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Entrez votre nom" id="last_name_user" type="text" class="validate">
+            <label for="last_name">Nom</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <button id="submit_user" class="btn btn-default btn-red">Envoyer</button>
+          </div>
+        </div>
+      </form>
+    </section>
     <header id="entete">
       <section class="container">
-        <a href="/"><h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>Les vidéos du moments</small></h1></a>
+        <a href="/"><h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>Les suggestions des internautes</small></h1></a>
       </section>
     </header>
     <nav id="menu" class="navbar-fixed">
       <div class="nav-wrapper container">
+        <span class="brand-logo" id="user"></span>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.html">Podcast</a></li>
           <li><a href="page.html">Spi0n</a></li>
@@ -37,8 +59,25 @@
     </ul>
     <section id="contact">
      <section class="row container">
-       <form action="#" class="col l6 m6 s12" id="form_suggestions">
-         <h2>Envoyer vos suggestions<br/></h2>
+       <section class="col l6 m6 s12">
+         <h2>Ils ont proposé ça :</h2>
+         <article>
+           <table class="responsive-table" id="suggestions">
+             <thead>
+               <tr>
+                 <th>Auteur</th>
+                 <th>Suggestions</th>
+                 <th>Date</th>
+               </tr>
+             </thead>
+             <tbody id="tbody">
+
+             </tbody>
+           </table>
+         </article>
+       </section>
+       <form action="#" class="col offset-l1 l5 offset-m1 m5 s12" id="form_suggestions">
+         <h2>Balance ton idée !<br/></h2>
          <div class="row">
            <div class="input-field col s6">
              <input placeholder="Entrez votre prénom" id="first_name" type="text" class="validate">
@@ -67,20 +106,6 @@
            </div>
          </div>
        </form>
-       <section class="col l6 m6 s12">
-         <h2>Envoyer vos suggestions<br/></h2>
-         <article>
-           <table class="responsive-table" id="suggestions">
-             <thead>
-               <tr>
-                 <th>Auteur</th>
-                 <th>Suggestions</th>
-                 <th>Date</th>
-               </tr>
-             </thead>
-           </table>
-         </article>
-       </section>
      </section>
    </section>
 

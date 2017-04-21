@@ -12,6 +12,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
+    <section class="mask"></section>
+    <section id="popup">
+      <form action="#" class="col l6 m6 s12" id="form_id">
+        <h2>Qui êtes vous ?<br/></h2>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="Entrez votre prénom" id="first_name_user" type="text" class="validate">
+            <label for="first_name">Prénom</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Entrez votre nom" id="last_name_user" type="text" class="validate">
+            <label for="last_name">Nom</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <button id="submit_user" class="btn btn-default btn-red">Envoyer</button>
+          </div>
+        </div>
+      </form>
+    </section>
     <header id="entete">
       <section class="container">
         <a href="/"><h1><i class="valign material-icons">ondemand_video</i> ZAP IT !<br/><small>La référence web des derniers Zaps</small></h1></a>
@@ -19,6 +40,7 @@
     </header>
     <nav id="menu" class="navbar-fixed">
       <div class="nav-wrapper container">
+        <span class="brand-logo" id="user"></span>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.html">Podcast</a></li>
           <li class="active"><a href="page.html">Spi0n</a></li>
