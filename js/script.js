@@ -3,22 +3,36 @@ $(document).ready(function(){
   var moyenne = 0;
   var nombre;
   var i;
-  $.getJSON("data.json", function(){
-   console.log('done');
- }).done(function(data){
-   nombre = data.nbVote;
-   localStorage.setItem('rating', JSON.stringify(data.rating));
-   $.each(data.rating, function(index, value){
-    moyenne += value.note;
-    i = index + 1;
-   });
-   moyenne = moyenne / i;
-   rating(moyenne,i);
-   console.log("la moyenne est de "+moyenne);
+  if (localStorage.getItem('rating') !== null) {
+    var moyenne = 0;
+    var nombre;
+    var i;
+    var vote = JSON.parse(localStorage.getItem("rating"));
+    nombre = vote.nbVote;
+    $.each(vote, function(index, value){
+     moyenne += value.note;
+     i = index + 1;
+    });
+    moyenne = moyenne / i;
+    rating(moyenne,i);
+  }else {
+    $.getJSON("data.json", function(){
+     console.log('done');
+   }).done(function(data){
+     nombre = data.nbVote;
+     localStorage.setItem('rating', JSON.stringify(data.rating));
+     $.each(data.rating, function(index, value){
+      moyenne += value.note;
+      i = index + 1;
+     });
+     moyenne = moyenne / i;
+     rating(moyenne,i);
+     console.log("la moyenne est de "+moyenne);
 
- }).fail(function(error){
-   console.log(error);
- });
+   }).fail(function(error){
+     console.log(error);
+   });
+  }
  $('#star-1').click(function(){
    var moyenne = 0;
    var nombre;
